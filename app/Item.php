@@ -9,7 +9,7 @@ class Item extends Model
 
     protected $guarded = ['id'];
 
-    protected $with = ['categories', 'jewelTypes'];
+    protected $with = ['categories', 'jewelTypes', 'images'];
     // public function prices()
     // {
     //     return $this->hasMany('App\Price');
@@ -23,5 +23,9 @@ class Item extends Model
     public function jewelTypes()
     {
         return $this->belongsToMany('App\JewelType');
+    }
+
+    public function images(){
+        return $this->hasMany('App\ItemImage');
     }
 }

@@ -28,3 +28,6 @@ Route::get('/jewelTypes', 'JewelTypeController@index');
 Route::post('/jewelType', 'JewelTypeController@store');
 
 Route::post('/usdFactor', 'UsdFactorController@store');
+Route::get('/usdFactor', 'UsdFactorController@index');
+
+Route::get('/itemImages', 'ItemImageController@index');

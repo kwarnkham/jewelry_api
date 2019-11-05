@@ -25,4 +25,10 @@ class UsdFactorController extends Controller
 
         return ['code' => '0', 'msg' => 'ok', 'result' => ['factor' => $factor]];
     }
+
+    public function index()
+    {
+        $factor = DB::table('usd_factors')->latest()->first();
+        return ['code' => '0', 'msg' => 'ok', 'result' => ['factor' => $factor]];
+    }
 }
